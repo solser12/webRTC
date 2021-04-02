@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Controller
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "*")
 public class SocketController {
 
     // /receive를 메시지를 받을 endpoint로 설정합니다.
