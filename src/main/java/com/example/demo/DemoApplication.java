@@ -10,7 +10,7 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 import org.springframework.web.socket.server.standard.ServletServerContainerFactoryBean;
 
 @SpringBootApplication
-@EnableWebSocket
+//@EnableWebSocket
 public class DemoApplication {//implements WebSocketConfigurer {
 
 //    @Bean
