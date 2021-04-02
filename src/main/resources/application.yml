@@ -5,3 +5,9 @@ server:
     key-store-password: kurento
     key-store-type: JKS
     key-alias: kurento-selfsigned
+
+spring:
+  banner:
+    location: classpath:banner.txt
+
+  logging
