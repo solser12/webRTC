@@ -10,4 +10,3 @@ spring:
   banner:
     location: classpath:banner.txt
 
-  logging
