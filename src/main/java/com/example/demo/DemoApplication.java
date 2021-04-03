@@ -11,7 +11,7 @@ import org.springframework.web.socket.server.standard.ServletServerContainerFact
 
 @SpringBootApplication
 //@EnableWebSocket
-public class DemoApplication {//implements WebSocketConfigurer {
+public class DemoApplication implements WebSocketConfigurer {
 
 //    @Bean
 //    public CallHandler callHandler() {
@@ -35,6 +35,11 @@ public class DemoApplication {//implements WebSocketConfigurer {
 //    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 //        registry.addHandler(callHandler(), "/call");
 //    }
+
+    @Override
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        registry.addHandler(new EchoHandler(), "/echo");
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
