@@ -16,6 +16,6 @@ public class SignalingConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(new SignalingHandler(),"/live").setAllowedOrigins("*");
+        registry.addHandler(new SignalingHandler(),"/chat").setAllowedOrigins("*");
     }
 }
