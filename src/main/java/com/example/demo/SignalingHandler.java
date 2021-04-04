@@ -12,7 +12,7 @@ import java.util.List;
 
 @Slf4j
 @Component
-public class SocketHandler extends TextWebSocketHandler {
+public class SignalingHandler extends TextWebSocketHandler {
     private List<WebSocketSession> sessions = new ArrayList<>();
 
     @Override
