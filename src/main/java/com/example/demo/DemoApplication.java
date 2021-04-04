@@ -11,35 +11,7 @@ import org.springframework.web.socket.server.standard.ServletServerContainerFact
 
 @SpringBootApplication
 //@EnableWebSocket
-public class DemoApplication implements WebSocketConfigurer {
-
-//    @Bean
-//    public CallHandler callHandler() {
-//        return new CallHandler();
-//    }
-//
-//    @Bean
-//    public KurentoClient kurentoClient() {
-//        return KurentoClient.create();
-//    }
-//
-//    @Bean
-//    public ServletServerContainerFactoryBean createServletServerContainerFactoryBean() {
-//        ServletServerContainerFactoryBean container = new ServletServerContainerFactoryBean();
-//        container.setMaxTextMessageBufferSize(32768);
-//        return container;
-//    }
-//
-//    // WebSocket를 등록 (wss:// + localhost + /call)
-//    @Override
-//    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-//        registry.addHandler(callHandler(), "/call");
-//    }
-
-    @Override
-    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(new EchoHandler(), "/echo");
-    }
+public class DemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
